@@ -16,7 +16,6 @@ License:	LGPLv2+
 Group:		Communications
 URL:		http://tilp.sourceforge.net/
 Source:		http://prdownloads.sourceforge.net/tilp/%{name}-%{version}.tar.bz2 
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libticables-devel >= %{libticables_version}
 BuildRequires:	libtifiles-devel >= %{libtifiles_version}
 Requires:	%{libname} = %{version}

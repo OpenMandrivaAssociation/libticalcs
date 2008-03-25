@@ -1,5 +1,5 @@
 %define version 4.6.2
-%define release %mkrel 2
+%define release %mkrel 3
 
 %define libticables_version 3.6.1
 %define libtifiles_version 0.6.1
@@ -40,7 +40,7 @@ formats:
 
 %package	-n %{libname}
 Summary:	Library to handle different TI calculators
-Group:		Communications
+Group:		System/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description	-n %{libname}
@@ -98,7 +98,8 @@ rm -rf ${RPM_BUILD_ROOT}
 %files -n %{libname}
 %defattr(-,root,root)
 %doc COPYING
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}
+%{_libdir}/*.so.%{major}.*
 
 %files -n %{develname}
 %defattr(-,root,root)

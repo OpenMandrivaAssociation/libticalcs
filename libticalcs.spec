@@ -1,5 +1,5 @@
 %define version 4.6.2
-%define release %mkrel 3
+%define release %mkrel 4
 
 %define libticables_version 3.6.1
 %define libtifiles_version 0.6.1
@@ -82,6 +82,9 @@ or compile applications that use %{name}.
 %install
 rm -rf ${RPM_BUILD_ROOT}
 %makeinstall_std gnulocaledir=${RPM_BUILD_ROOT}%{_datadir}/locale
+
+#fix conflicts with libticables-devel
+rm -f %buildroot%_includedir/tilp/export.h
 
 %find_lang %{name}
 

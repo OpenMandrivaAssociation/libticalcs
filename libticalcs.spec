@@ -1,5 +1,5 @@
 %define version 4.6.2
-%define release %mkrel 4
+%define release %mkrel 5
 
 %define libticables_version 3.6.1
 %define libtifiles_version 0.6.1

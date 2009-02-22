@@ -1,10 +1,11 @@
-%define version 4.6.2
-%define release %mkrel 5
+%define oname libticalcs2
+%define version 1.1.2
+%define release %mkrel 1
 
-%define libticables_version 3.6.1
-%define libtifiles_version 0.6.1
+%define libticables_version 1.2.0
+%define libtifiles_version 1.1.1
 
-%define major 4
+%define major 7
 %define libname %mklibname ticalcs %{major}
 %define develname %mklibname -d ticalcs
 
@@ -15,7 +16,7 @@ Release:	%{release}
 License:	LGPLv2+
 Group:		Communications
 URL:		http://tilp.sourceforge.net/
-Source:		http://prdownloads.sourceforge.net/tilp/%{name}-%{version}.tar.bz2 
+Source:		http://prdownloads.sourceforge.net/tilp/%{oname}-%{version}.tar.bz2 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libticables-devel >= %{libticables_version}
 BuildRequires:	libtifiles-devel >= %{libtifiles_version}
@@ -73,7 +74,7 @@ This package contains headers and other necessary files to develop
 or compile applications that use %{name}.
 
 %prep
-%setup -q
+%setup -q -n %{oname}-%{version}
 
 %build
 %configure2_5x --enable-static=yes
@@ -81,12 +82,12 @@ or compile applications that use %{name}.
 
 %install
 rm -rf ${RPM_BUILD_ROOT}
-%makeinstall_std gnulocaledir=${RPM_BUILD_ROOT}%{_datadir}/locale
+%makeinstall_std gnulocaledir=%{buildroot}%{_datadir}/locale
 
 #fix conflicts with libticables-devel
 rm -f %buildroot%_includedir/tilp/export.h
 
-%find_lang %{name}
+%find_lang %{oname}
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
@@ -99,8 +100,8 @@ rm -f %buildroot%_includedir/tilp/export.h
 %clean
 rm -rf ${RPM_BUILD_ROOT}
 
-%files -f %{name}.lang
-%defattr(-,root,root)
+# %files -f %{name}.lang
+# %defattr(-,root,root)
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -111,8 +112,9 @@ rm -rf ${RPM_BUILD_ROOT}
 %files -n %{develname}
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog README
-%{_includedir}/tilp/*
+%{_includedir}/tilp2/*
 %{_libdir}/*.a
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
+%{_datadir}/locale/fr/LC_MESSAGES/libticalcs2.mo

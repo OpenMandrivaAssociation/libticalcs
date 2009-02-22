@@ -1,6 +1,7 @@
 %define oname libticalcs2
 %define version 1.1.2
-%define release %mkrel 3
+%define release %mkrel 1
+%define epoch 1
 
 %define libticables_version 1.2.0
 %define libtifiles_version 1.1.1
@@ -43,7 +44,7 @@ formats:
 %package	-n %{libname}
 Summary:	Library to handle different TI calculators
 Group:		System/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description	-n %{libname}
 The TiCalcs library is a part of the TiLP project and constitutes with

@@ -66,7 +66,7 @@ formats:
 %package	-n %{develname}
 Summary:	Development related files for %{name}
 Group:		Development/Other
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{epoch}:%{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%mklibname -d ticalcs 4
 

@@ -13,6 +13,7 @@ Summary:	Library to handle the different TI calculators
 Name:		libticalcs
 Version:	%{version}
 Release:	%{release}
+Epoch:		1
 License:	LGPLv2+
 Group:		Communications
 URL:		http://tilp.sourceforge.net/

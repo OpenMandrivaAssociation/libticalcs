@@ -1,7 +1,7 @@
 %define oname libticalcs2
 %define version 1.1.2
 %define release %mkrel 1
-%define epoch 1
+
 
 %define libticables_version 1.2.0
 %define libtifiles_version 1.1.1

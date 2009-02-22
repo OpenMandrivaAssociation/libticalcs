@@ -1,6 +1,6 @@
 %define oname libticalcs2
 %define version 1.1.2
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define libticables_version 1.2.0
 %define libtifiles_version 1.1.1
@@ -101,8 +101,8 @@ rm -f %buildroot%_includedir/tilp/export.h
 %clean
 rm -rf ${RPM_BUILD_ROOT}
 
-# %files -f %{name}.lang
-# %defattr(-,root,root)
+%files -f %{oname}.lang
+%defattr(-,root,root)
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -118,4 +118,3 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
-%{_datadir}/locale/fr/LC_MESSAGES/libticalcs2.mo

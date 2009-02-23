@@ -1,6 +1,6 @@
 %define oname libticalcs2
 %define version 1.1.2
-%define release %mkrel 4
+%define release %mkrel 5
 
 
 %define libticables_version 1.2.0
@@ -22,7 +22,6 @@ Source:		http://prdownloads.sourceforge.net/tilp/%{oname}-%{version}.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libticables-devel >= %{libticables_version}
 BuildRequires:	libtifiles-devel >= %{libtifiles_version}
-Requires:	%{libname} = %{version}
 
 %description
 The TiCalcs library is a part of the TiLP project and constitutes with

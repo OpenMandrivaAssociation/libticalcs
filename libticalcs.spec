@@ -1,12 +1,12 @@
 %define oname libticalcs2
-%define version 1.1.2
-%define release %mkrel 7
+%define version 1.1.5
+%define release %mkrel 1
 
 
-%define libticables_version 1.2.0
-%define libtifiles_version 1.1.1
+%define libticables_version 1.3.1
+%define libtifiles_version 1.1.3
 
-%define major 7
+%define major 8
 %define libname %mklibname ticalcs %{major}
 %define develname %mklibname -d ticalcs
 
@@ -118,3 +118,81 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
+
+
+%changelog
+* Thu Mar 12 2009 Olivier Thauvin <nanardon@mandriva.org> 1:1.1.2-6mdv2009.1
++ Revision: 354064
+- rebuild
+
+* Mon Feb 23 2009 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.2-5mdv2009.1
++ Revision: 344162
+- Remove circular requirement
+
+* Mon Feb 23 2009 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.2-4mdv2009.1
++ Revision: 344148
+- Increment release
+- Remove circular requirement
+- Remove redundant redefine of epoch
+- Add epoch to requirements
+
+* Sun Feb 22 2009 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.2-3mdv2009.1
++ Revision: 343891
+- Bump Release
+- Fix circular dependancy in Devel package
+
+* Sun Feb 22 2009 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.2-2mdv2009.1
++ Revision: 343792
+- Fix find_lang
+
+* Sun Feb 22 2009 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.2-1mdv2009.1
++ Revision: 343786
+- Fixed Lang Package temporarily and updated to 1.1.2
+- Fixed Lang Package temporarily and updated to 1.1.2
+- Fixed Lang Package temporarily and updated to 1.1.2
+
+* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 4.6.2-5mdv2009.0
++ Revision: 268035
+- rebuild early 2009.0 package (before pixel changes)
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Sat Jun 07 2008 Funda Wang <fundawang@mandriva.org> 4.6.2-4mdv2009.0
++ Revision: 216577
+- fix conflicts with libticables
+
+* Tue Mar 25 2008 Emmanuel Andry <eandry@mandriva.org> 4.6.2-3mdv2008.1
++ Revision: 189888
+- Fix lib group
+- protect major
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Mon Dec 10 2007 Funda Wang <fundawang@mandriva.org> 4.6.2-2mdv2008.1
++ Revision: 116807
+- New devel package policy
+
+
+* Sun Jan 21 2007 Olivier Thauvin <nanardon@mandriva.org> 4.6.2-1mdv2007.0
++ Revision: 111423
+- 4.6.2
+- 4.6.1
+- Import libticalcs
+
+* Wed Jun 29 2005 Olivier Thauvin <nanardon@mandriva.org> 4.5.9-1mdk
+- 4.5.9
+
+* Sun Feb 06 2005 Abel Cheung <deaddog@mandrake.org> 4.5.5-1mdk
+- New version
+- Split package, otherwise can't have multilib
+
+* Mon May 31 2004 Abel Cheung <deaddog@deaddog.org> 4.5.3-1mdk
+- New version
+- Doesn't need to build against multiple version of glib, thus change
+  package name back to old one
+

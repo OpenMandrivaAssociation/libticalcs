@@ -1,10 +1,10 @@
 %define oname libticalcs2
-%define version 1.1.5
+%define version 1.1.7
 %define release %mkrel 1
 
 
-%define libticables_version 1.3.1
-%define libtifiles_version 1.1.3
+%define libticables_version 1.3.3
+%define libtifiles_version 1.1.5
 
 %define major 8
 %define libname %mklibname ticalcs %{major}
@@ -115,7 +115,7 @@ rm -rf ${RPM_BUILD_ROOT}
 %doc AUTHORS ChangeLog README
 %{_includedir}/tilp2/*
 %{_libdir}/*.a
-%{_libdir}/*.la
+# %{_libdir}/*.la
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 

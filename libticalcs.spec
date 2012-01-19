@@ -6,7 +6,7 @@
 %define libticables_version 1.3.3
 %define libtifiles_version 1.1.5
 
-%define major 8
+%define major 10
 %define libname %mklibname ticalcs %{major}
 %define develname %mklibname -d ticalcs
 

@@ -120,7 +120,22 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_libdir}/pkgconfig/*.pc
 
 
+
+
 %changelog
+* Thu Jan 19 2012 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.7-1mdv2012.0
++ Revision: 762269
+- Fix libs
+- Fix libs
+
+* Tue Jul 13 2010 Zombie Ryushu <ryushu@mandriva.org> 1:1.1.5-1mdv2011.0
++ Revision: 551880
+- Upgrade and fix dependencies
+- Upgrade to 1.3.1
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
 * Thu Mar 12 2009 Olivier Thauvin <nanardon@mandriva.org> 1:1.1.2-6mdv2009.1
 + Revision: 354064
 - rebuild
@@ -151,14 +166,14 @@ rm -rf ${RPM_BUILD_ROOT}
 - Fixed Lang Package temporarily and updated to 1.1.2
 - Fixed Lang Package temporarily and updated to 1.1.2
 
-* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 4.6.2-5mdv2009.0
+* Fri Aug 08 2008 Thierry Vignaud <tv@mandriva.org> 4.6.2-5mdv2009.0
 + Revision: 268035
 - rebuild early 2009.0 package (before pixel changes)
 
   + Pixel <pixel@mandriva.com>
     - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
 
-* Sat Jun 07 2008 Funda Wang <fundawang@mandriva.org> 4.6.2-4mdv2009.0
+* Sat Jun 07 2008 Funda Wang <fwang@mandriva.org> 4.6.2-4mdv2009.0
 + Revision: 216577
 - fix conflicts with libticables
 
@@ -167,13 +182,13 @@ rm -rf ${RPM_BUILD_ROOT}
 - Fix lib group
 - protect major
 
-  + Olivier Blin <oblin@mandriva.com>
+  + Olivier Blin <blino@mandriva.org>
     - restore BuildRoot
 
-  + Thierry Vignaud <tvignaud@mandriva.com>
+  + Thierry Vignaud <tv@mandriva.org>
     - kill re-definition of %%buildroot on Pixel's request
 
-* Mon Dec 10 2007 Funda Wang <fundawang@mandriva.org> 4.6.2-2mdv2008.1
+* Mon Dec 10 2007 Funda Wang <fwang@mandriva.org> 4.6.2-2mdv2008.1
 + Revision: 116807
 - New devel package policy
 

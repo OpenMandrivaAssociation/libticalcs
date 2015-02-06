@@ -1,6 +1,6 @@
 %define oname libticalcs2
 %define version 1.1.7
-%define release %mkrel 1
+%define release 2
 
 
 %define libticables_version 1.3.3
